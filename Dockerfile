@@ -38,8 +38,9 @@ libboost-all-dev
 RUN wget https://github.com/rmjarvis/tmv/archive/v0.73.tar.gz
 RUN tar xzvf v0.73.tar.gz 
 RUN rm v0.73.tar.gz
-WORKDIR /usr/src/tmv-0.73 && rm -rf /usr/src/tmv-0.73
-RUN scons && scons install
+WORKDIR /usr/src/tmv-0.73 
+RUN scons && scons install && rm -rf /usr/src/tmv-0.73
+
 
 # Fix bash error according to
 # https://github.com/GalSim-developers/GalSim/wiki/Installation%20FAQ#why-is-scons-unable-to-get-python-include-path-python-executable-on-ubuntu
