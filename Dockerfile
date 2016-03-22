@@ -41,14 +41,13 @@ RUN rm v0.73.tar.gz
 WORKDIR /usr/src/tmv-0.73 
 RUN scons && scons install && rm -rf /usr/src/tmv-0.73
 
-
 # Fix bash error according to
 # https://github.com/GalSim-developers/GalSim/wiki/Installation%20FAQ#why-is-scons-unable-to-get-python-include-path-python-executable-on-ubuntu
-# ENV SHELL /bin/bash
-# RUN mv /bin/sh /bin/sh.orig && ln -s /bin/bash /bin/sh
+ENV SHELL /bin/bash
+RUN mv /bin/sh /bin/sh.orig && ln -s /bin/bash /bin/sh
   
 RUN echo "\n\n---------- Installing Galsim -------\n\n"
 WORKDIR /usr/src/GalSim
-RUN git checkout master
+RUN git checkout release/1.3
 RUN scons && scons install && rm -rf /usr/src/GalSim
 
