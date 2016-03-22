@@ -7,11 +7,11 @@ in this repo will trigger a new build.
 # How to use:
 
 ## Method 1: pull and run docker image 
-1) Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) if you do not have Linux as your OS.
+1) Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) if you do not have Linux as your OS.     
 2) Install docker following [these
-instructions](https://getcarina.com/docs/tutorials/docker-install-mac/).
-3) Start docker via the quickstart terminal
-4) In the quickstart terminal with the whale logo, issue
+instructions](https://getcarina.com/docs/tutorials/docker-install-mac/).   
+3) Start docker via the quickstart terminal.    
+4) In the quickstart terminal with the whale logo, issue    
 ```
 $ docker run -ti karenyng/galsim_dockerfile
 ```
