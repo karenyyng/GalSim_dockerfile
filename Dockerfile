@@ -34,7 +34,7 @@ scons \
 libfftw3-dev \
 libboost-all-dev
 
-# RUN echo "\n\n---------- Installing TMV-cpp -------\n\n"
+RUN echo "\n\n---------- Installing TMV-cpp -------\n\n"
 RUN wget https://github.com/rmjarvis/tmv/archive/v0.73.tar.gz
 RUN tar xzvf v0.73.tar.gz 
 RUN rm v0.73.tar.gz
@@ -44,9 +44,9 @@ RUN scons && scons install && rm -rf /usr/src/tmv-0.73
 
 # Fix bash error according to
 # https://github.com/GalSim-developers/GalSim/wiki/Installation%20FAQ#why-is-scons-unable-to-get-python-include-path-python-executable-on-ubuntu
-RUN mv /bin/sh /bin/sh.orig
-RUN ln -s /bin/bash /bin/sh
- 
+ENV SHELL /bin/bash
+RUN mv /bin/sh /bin/sh.orig && ln -s /bin/bash /bin/sh
+  
 RUN echo "\n\n---------- Installing Galsim -------\n\n"
 WORKDIR /usr/src/GalSim
 RUN scons && scons install && rm -rf /usr/src/GalSim
