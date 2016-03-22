@@ -48,6 +48,6 @@ RUN mv /bin/sh /bin/sh.orig && ln -s /bin/bash /bin/sh
   
 RUN echo "\n\n---------- Installing Galsim -------\n\n"
 WORKDIR /usr/src/GalSim
-RUN git checkout release/1.3
+RUN git checkout v1.3.0
 RUN scons && scons install && rm -rf /usr/src/GalSim
 
