@@ -21,7 +21,7 @@ then you will have control of the container once the terminal prompt changes.
 Press enter if nothing seems to happen after the download.
 
 
-## Method 2: pull and run docker image 
+## Method 2: build and run docker image 
 Using the dockerfile here and building the image will take much longer.
 But you can do it if you want.
 ```
