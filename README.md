@@ -21,7 +21,6 @@ branch.
 Then the image will be downloaded and run.
 Press enter after the prompt does not change anymore and 
 then you will have control of the container once the terminal prompt changes.
-Press enter if nothing seems to happen after the download.
 
 
 ## Method 2: build and run docker image 
