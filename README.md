@@ -13,8 +13,11 @@ instructions](https://getcarina.com/docs/tutorials/docker-install-mac/).
 3) Start docker via the quickstart terminal.    
 4) In the quickstart terminal with the whale logo, issue    
 ```
-$ docker run -ti karenyng/galsim_dockerfile
+$ docker run -ti karenyng/galsim_dockerfile:<TAG_NAME>
 ```
+Put `<TAG_NAME>=v1.3.0` if you want to use `release/v1.3.0` of `GalSim`.
+If you use `<TAG_NAME>=latest` or omit `:`, the master branch of `GalSim`
+will be pulled instead.
 then the image will be downloaded and run.
 Press enter after the prompt does not change anymore and 
 then you will have control of the container once the terminal prompt changes.
@@ -26,6 +29,7 @@ Using the dockerfile here and building the image will take much longer.
 But you can do it if you want.
 ```
 $ git clone https://github.com/karenyyng/GalSim_dockerfile.git
+$ git checkout v1.3.0   # if you want v1.3.0 of Galsim
 $ cd GalSim_dockerfile  # or whatever the folder name of the git repo is
 ```
 Follow step 1-3 above, then
