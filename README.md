@@ -40,3 +40,11 @@ You can then run the built image by:
 ```
 $ docker run -it IMAGE_NAME
 ```
+
+# Docker learning resources
+* My brief docker intro [slides](http://karenyyng.github.io/MySlideDeck/dockerTutorial.html) that summarizes some of the important concepts and commands to get you started.
+
+Docker also has excellent online resources, check out:   
+* [Official Docker 3rd birthday tutorial](https://github.com/docker/docker-birthday-3/blob/master/tutorial.md)
+* [Docker online webminars](https://training.docker.com/self-paced-training)
+
